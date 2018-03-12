@@ -3,7 +3,12 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'inicio' },
- // { path: 'inicio', component:  },
+  { path: 'inicio', loadChildren: './inicio/inicio.module#InicioModule'},
+  { path: 'historia', loadChildren: './historia/historia.module#HistoriaModule'},
+  { path: 'competiciones', loadChildren: './competiciones/competiciones.module#CompeticionesModule'},
+  { path: 'centros', loadChildren: './centros/centros.module#CentrosModule'},
+  { path: 'about', loadChildren: './about/about.module#AbuotModule'}
+  // { path: 'inicio', component:  },
 ];
 
 @NgModule({

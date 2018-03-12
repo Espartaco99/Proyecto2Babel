@@ -1,15 +1,14 @@
-/
+
 header{
-    display: flex;
-    justify-content: space-between;
-    margin-left: -6%;
-    margin-right: -6%;
-    padding: 15px;
-    margin-bottom: 3%;
+    
     background-color: white;
-    height: 120px;
+   
 }
 
+.oculto{
+    display:none !important;
+}
+/*
 header img{
     margin-bottom: auto;
     margin-top: auto;
@@ -24,7 +23,7 @@ header h1{
     text-align: center;
     font-size: 4rem;
     margin: auto;
-}/* 
+}
 header > button{
     margin-top: auto;
     margin-bottom: auto;

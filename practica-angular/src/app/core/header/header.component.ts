@@ -6,8 +6,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
-  constructor() { }
+  public vista;
+  constructor() {
+    this.vista = {
+        aBtnsMenu: document.querySelectorAll('a'),
+         eMain : document.querySelector('main'),
+        aImports: document.querySelectorAll('link[rel="import"]'),
+        oImports: {},
+        bMenu:  document.querySelector('#botonMenu')
+    };
+ // this.desplegarMenu();
+   }
+   desplegarMenu() {
+    document.querySelector('#menu_movil').classList.toggle('oculto');
+}
 
   ngOnInit() {
   }

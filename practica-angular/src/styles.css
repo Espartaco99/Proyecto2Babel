@@ -1,6 +1,7 @@
 /*@import "./reset.css";*/
 @import url('https://fonts.googleapis.com/css?family=Questrial');
 @import "../node_modules/font-awesome/css/font-awesome.min.css";
+@import "~bootstrap/dist/css/bootstrap.css";
 html{
     font-family: "Questrial", sans-serif;
 }
