@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'inicio' },
-  { path: 'inicio', component:  },
+  { path: '', pathMatch: 'full', redirectTo: 'path' },
+  /* { path: 'inicio', component: '' }, */
 ];
 
 @NgModule({
