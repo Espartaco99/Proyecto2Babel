@@ -1,0 +1,12 @@
+aside{
+    background-color: aquamarine;
+    border-radius: 5px;
+    border: solid 1px blue;
+    padding:2%;
+   
+}
+aside div{
+   display: flex;
+    justify-content: center;
+    margin: 1%;
+}
