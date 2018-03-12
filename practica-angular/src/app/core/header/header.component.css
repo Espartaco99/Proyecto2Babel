@@ -1,4 +1,4 @@
-/*
+/
 header{
     display: flex;
     justify-content: space-between;
@@ -24,11 +24,11 @@ header h1{
     text-align: center;
     font-size: 4rem;
     margin: auto;
-}
+}/* 
 header > button{
     margin-top: auto;
     margin-bottom: auto;
     font-size: 3rem;
     width: 50px;
     margin-left: 3%;
-}*/
+} */
