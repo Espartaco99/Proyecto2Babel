@@ -6,12 +6,14 @@ import { CoreComponent } from './core.component';
 import { HeaderComponent } from './header/header.component';
 import { MainComponent } from './main/main.component';
 import { FooterComponent } from './footer/footer.component';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   imports: [
     CommonModule,
     CoreRoutingModule
   ],
-  declarations: [CoreComponent, HeaderComponent, MainComponent, FooterComponent]
+  declarations: [CoreComponent, HeaderComponent, MainComponent, FooterComponent, MenuComponent],
+  exports: [HeaderComponent, MainComponent, FooterComponent]
 })
 export class CoreModule { }
