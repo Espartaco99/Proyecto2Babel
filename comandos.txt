@@ -1,0 +1,3 @@
+ng new practica-angular -p bbl --routing true
+cd practica-angular/
+npm install @angular/cli
