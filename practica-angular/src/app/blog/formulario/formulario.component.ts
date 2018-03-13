@@ -11,6 +11,7 @@ export class FormularioComponent implements OnInit {
   @ViewChild('formEntradas') formUser: any;
   entrada: Entradas;
   validado: Object;
+  palabrasClave: string;
   @Output() outAddEntrada: EventEmitter<Entradas>;
   constructor(public entradasService: EntradasService) {
     this.outAddEntrada = new EventEmitter();
@@ -23,12 +24,13 @@ export class FormularioComponent implements OnInit {
   }
   enviar() {
     console.log('Datos enviados');
+    this.entrada.palabrasClave = this.palabrasClave.split(' ');
 
+    this.entradasService.setEntrada(this.entrada);
     this.outAddEntrada.emit(this.entrada);
-    console.log(this.entrada);
     this.resetEntrada();
     this.formUser.reset();
-    // this.entradasService.setEntrada();
+
   }
   btnBorrar() {
       this.formUser.reset();

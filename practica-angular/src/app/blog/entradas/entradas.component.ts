@@ -10,7 +10,7 @@ import { EntradasService } from '../../servicios/entradas.service';
   styleUrls: ['./entradas.component.css']
 })
 export class EntradasComponent implements OnInit {
-  listaEntradas: Entradas[];
+  @Input() listaEntradas: Entradas[];
 
   sTitle: string;
   sEtiquetaBtn: string;
