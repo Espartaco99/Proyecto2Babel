@@ -9,7 +9,7 @@ const routes: Routes = [
   { path: 'historia', loadChildren: './historia/historia.module#HistoriaModule'},
   { path: 'competiciones', loadChildren: './competiciones/competiciones.module#CompeticionesModule'},
   { path: 'centros', loadChildren: './centros/centros.module#CentrosModule'},
-  { path: 'about', loadChildren: './about/about.module#AbuotModule'}
+  { path: 'about', loadChildren: './about/about.module#AboutModule'}
   // { path: 'inicio', component:  },
 ];
 
