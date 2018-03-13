@@ -1,14 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'bbl-inicio',
+  selector: 'bbl-competiciones',
   template: `
-    <bbl-aside></bbl-aside>
-    <bbl-section></bbl-section>
+    <p>
+      competiciones works!
+    </p>
   `,
   styles: []
 })
-export class InicioComponent implements OnInit {
+export class CompeticionesComponent implements OnInit {
 
   constructor() { }
 
