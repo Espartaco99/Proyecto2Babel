@@ -3,17 +3,23 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'bbl-about',
   template: `
-    <p>
-      about works!
-    </p>
+    <div class="container">
+      <div class="row">
+        <div class="col-10">
+          <bbl-autores></bbl-autores>
+        </div>
+      </div>
+    </div>
   `,
   styles: []
 })
 export class AboutComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+   }
 
   ngOnInit() {
+   // Router.navigate();
   }
 
 }
