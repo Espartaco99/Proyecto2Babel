@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { InicioModule } from './inicio/inicio.module';
+import {HttpClientModule} from '@angular/common/http';
 
 
 
@@ -17,7 +18,8 @@ import { InicioModule } from './inicio/inicio.module';
     BrowserModule,
     AppRoutingModule,
     CoreModule,
-    InicioModule
+    InicioModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

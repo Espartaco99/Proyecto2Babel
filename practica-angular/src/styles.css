@@ -20,4 +20,13 @@ html{
     z-index: -1;
     background-repeat: no-repeat;
 } 
+.center{
+    display: flex;
+    justify-content: center;
+}
+.spaced{
+    display: flex;
+    justify-content: space-around;
+}
+
 /* You can add global styles to this file, and also import other style files */

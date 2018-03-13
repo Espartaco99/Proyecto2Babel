@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+
+
 
 @Component({
   selector: 'bbl-entradas',
@@ -6,10 +8,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./entradas.component.css']
 })
 export class EntradasComponent implements OnInit {
+  listaEntradas: string[];
 
-  constructor() { }
+  sTitle: string;
+  sEtiquetaBtn: string;
+  @Input() aItems: Array<any>;
+  @Output() outBorrarItem: EventEmitter<number>;
+
+  constructor() {
+    this.outBorrarItem = new EventEmitter();
+   }
 
   ngOnInit() {
+    this.listaEntradas = [];
+    this.sTitle = 'Contactos personales';
+    this.sEtiquetaBtn = 'Eliminar';
   }
-
+  deleteItem(i) {
+    this.outBorrarItem.emit(i);
+  }
 }

@@ -1,3 +1,19 @@
-<p>
-  entradas works!
-</p>
+<div class="container">
+    <div class="row">
+      <div class="col">
+  <div id="entrada" class="oculto">
+    <h2>Entradas Disponibles</h2>
+    <div *ngFor="let entrada of listaEntradas">
+        <label class="col">Autor: </label><!-- <label id="autorDatos"></label> -->
+        <label class="col">Email: </label><!-- <label id="emailEntradaDatos"></label> -->
+        <label class="col">Titulo Entrada: </label><!-- <label id="tituloDatos"></label> -->
+        <label class="col">Palabras Clave: </label><!-- <label id="keywordsDatos"></label> -->
+        <label class="col">Entrada: </label><!-- <label id="entradaDatos"></label> -->
+    </div>
+<!--   <label class="center">
+    <a routerLink="../autores" id="linkAutores" title="linkAutores" routerLinkActive = "active">Autores</a> /
+    <a routerLink="../formulario" id="linkFormulario" class="desactivo" routerLinkActive = "active">Contacta con nosotros:</a>
+  </label> -->
+      </div>
+    </div>
+  </div>
