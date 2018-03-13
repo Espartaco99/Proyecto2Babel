@@ -4,7 +4,6 @@ import { CommonModule } from '@angular/common';
 import { CoreRoutingModule } from './core-routing.module';
 import { CoreComponent } from './core.component';
 import { HeaderComponent } from './header/header.component';
-import { MainComponent } from './main/main.component';
 import { FooterComponent } from './footer/footer.component';
 import { MenuComponent } from './menu/menu.component';
 import { RouterModule } from '@angular/router';
@@ -15,7 +14,7 @@ import { RouterModule } from '@angular/router';
     CommonModule,
     CoreRoutingModule
   ],
-  declarations: [CoreComponent, HeaderComponent, MainComponent, FooterComponent, MenuComponent],
-  exports: [HeaderComponent, MainComponent, FooterComponent]
+  declarations: [CoreComponent, HeaderComponent, FooterComponent, MenuComponent],
+  exports: [HeaderComponent, FooterComponent, MenuComponent]
 })
 export class CoreModule { }
