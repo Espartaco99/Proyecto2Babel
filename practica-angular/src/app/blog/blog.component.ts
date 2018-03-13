@@ -3,9 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'bbl-blog',
   template: `
-    <p>
-      blog works!
-    </p>
+    <bbl-formulario></bbl-formulario>
   `,
   styles: []
 })
