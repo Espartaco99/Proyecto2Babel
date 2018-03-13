@@ -13,22 +13,23 @@ export class EntradasService {
     this.listaEntradas = [];
   }
 
-  getContactos() {
+  getEntradas() {
     // const aLibros: Array<string>  = [];
     return this.http.get(this.sURL).toPromise()
     .then((response: any) => {
+      console.log(response);
       this.listaEntradas = response;
       return this.listaEntradas;
     });
 }
 
-setContactos(oContacto) {
+setEntrada(entrada) {
     console.log('Enviando datos');
-    console.log(oContacto);
-    return this.http.post(this.sURL, oContacto).toPromise();
+    console.log(entrada);
+    return this.http.post(this.sURL, entrada).toPromise();
 }
 
-deleteContacto (i) {
+deleteEntrada(i) {
     i++;
     return this.http.delete(this.sURL + '/' + i).toPromise();
     // this.aContactos.splice(i, 1);
