@@ -4,13 +4,11 @@ import { InicioComponent } from './inicio/inicio.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'inicio' },
-//  { path: 'inicio', loadChildren: './inicio/inicio.module#InicioModule'},
-{ path: 'inicio', component: InicioComponent },
+  { path: 'inicio', component: InicioComponent },
   { path: 'historia', loadChildren: './historia/historia.module#HistoriaModule'},
   { path: 'competiciones', loadChildren: './competiciones/competiciones.module#CompeticionesModule'},
   { path: 'centros', loadChildren: './centros/centros.module#CentrosModule'},
   { path: 'about', loadChildren: './about/about.module#AboutModule'}
-  // { path: 'inicio', component:  },
 ];
 
 @NgModule({
