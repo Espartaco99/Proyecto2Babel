@@ -14,20 +14,22 @@ export class EntradasService {
   }
 
   getEntradas() {
-    // const aLibros: Array<string>  = [];
     return this.http.get(this.sURL).toPromise()
     .then((response: any) => {
-      console.log(response);
       this.listaEntradas = response;
       return this.listaEntradas;
     });
-}
+  }
 
-setEntrada(entrada) {
-    console.log('Enviando datos');
-    console.log(entrada);
-    return this.http.post(this.sURL, entrada).toPromise();
-}
+  getEntrada(id: string) {
+    return this.listaEntradas.find(entrada => entrada.id === id);
+  }
+
+  setEntrada(entrada) {
+      console.log('Enviando datos');
+      console.log(entrada);
+      return this.http.post(this.sURL, entrada).toPromise();
+  }
 
 deleteEntrada(i) {
     i++;

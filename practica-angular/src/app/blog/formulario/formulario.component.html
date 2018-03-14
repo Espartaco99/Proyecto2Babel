@@ -1,5 +1,6 @@
-<div id="formulario" class="row" novalidate [ngClass]="validado">
-  <div class="col">
+<div class="container">
+  <div id="formulario" class="row" novalidate [ngClass]="validado">
+    <div class="col">
       <h2>Escribe una nueva entrada</h2>
       <form name="form_entrada" id="form_entrada" method="post" (ngSubmit)="enviar()" #formEntradas="ngForm"> 
           <label for="autor" class="col">Autor: <input id ="autor" type="text" name="autor" placeholder="Introduce tu nombre" required [(ngModel)]="entrada.autor"></label>
@@ -24,3 +25,4 @@
       </form>
     </div>
   </div>
+</div>
