@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, Input, EventEmitter } from '@angular/core';
+import { Datos } from '../modelos/datos';
+
 
 @Component({
   selector: 'bbl-about',
@@ -14,8 +16,10 @@ import { Component, OnInit } from '@angular/core';
   styles: []
 })
 export class AboutComponent implements OnInit {
-
+  @Output() public pasarDatos = new EventEmitter<object>();
+  @Input()  recibirDatos: Datos;
   constructor() {
+    this.pasarDatos = new EventEmitter();
    }
 
   ngOnInit() {

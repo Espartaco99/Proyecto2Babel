@@ -3,8 +3,10 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'bbl-inicio',
   template: `
-    <bbl-aside></bbl-aside>
-    <bbl-section></bbl-section>
+  <div class="row">
+      <bbl-section  class="col-7"></bbl-section>
+      <bbl-aside ></bbl-aside>
+  </div>
   `,
   styles: []
 })

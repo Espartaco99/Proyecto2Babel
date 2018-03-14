@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MostrarDatosService } from '../../servicios/mostrarDatos.service';
+import { Datos } from '../../modelos/datos';
 
 @Component({
   selector: 'bbl-muestra-datos',
@@ -6,10 +8,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./muestra-datos.component.css']
 })
 export class MuestraDatosComponent implements OnInit {
-
-  constructor() { }
+  datosD: Datos;
+  public nombre: string;
+  public email: string;
+  public checkbox: string;
+  public opinionDatos: string;
+  public experienciaDatos: any;
+  constructor(public rDatos: MostrarDatosService) { }
 
   ngOnInit() {
+    this.datosD = this.rDatos.recibirDatos();
+    console.dir(this.datosD);
+    this.nombre = this.datosD.nombre;
+    this.email = this.datosD.email;
+    this.checkbox = this.datosD.checkbox;
+    this.opinionDatos = this.datosD.opinionDatos;
+    this.experienciaDatos = this.datosD.experienciaDatos;
   }
 
 }
