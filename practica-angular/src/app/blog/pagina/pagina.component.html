@@ -1,3 +1,23 @@
-<p>
-  pagina works!
-</p>
+<div class="container ">
+    <div class="row alto mt-4">
+      <div class="card col-12">
+        <div class="card-header">
+          <p class="h4">{{entrada.titulo}}</p>
+        </div>
+        <div class="card-body row">
+          <label class="col-1 text-primary">Autor: </label>
+          <p class="card-text col-11">{{entrada.autor}}</p>
+          <label class="col-1 text-primary">Email: </label>
+          <p class="card-text col-11">{{entrada.email}}</p>
+          </div>
+        <div class="card-footer text-muted">
+          <label class="text-primary">Texto: </label>
+          <p class="card-text">{{entrada.texto}}</p>
+        </div>
+        <div class="card-body">
+            <button (click)="gotoBlog()" class="btn btn-primary">
+          Volver Atras</button>
+          </div>     
+      </div>
+    </div>
+  </div>

@@ -21,13 +21,9 @@ export class EntradasComponent implements OnInit {
    }
 
   ngOnInit() {
-    this.listaEntradas = [];
-    this.entradasService.getEntradas()
-    .then((value) => { this.listaEntradas = value; })
+    // this.listaEntradas = [];
+    this.entradasService.getEntradas().then((value) => { this.listaEntradas = value; })
     .catch(() => alert('Fallo en entradas components, bbdd no inicializada o no existe entradas'));
-      console.log(this.listaEntradas);
-    /* this.sTitle = 'Contactos personales';
-    this.sEtiquetaBtn = 'Eliminar'; */
   }
   /* deleteItem(i) {
     this.outBorrarItem.emit(i);
