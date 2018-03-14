@@ -1,12 +1,23 @@
 <div class="container col">
       <header class="row">
 
-          <a class="col-2" href="#"><img src="assets/Logo_Salto_Base.jpg" classs="img-fluid" alt="Logo Salto Base"></a>
+          <a class="col-2 row m-3" href="#"><img src="assets/Logo_Salto_Base.jpg" class="img-fluid" alt="Logo Salto Base"></a>
          
               <h1  class="col-8  text-center p-5">Salto Base</h1>
         
-            <button id="botonMenu" class="botonMenu m-5 p-1 col-2 oculto"><span class ="fa fa-bars"></span></button>
+            <button id="botonMenu" (click)="desplegarMenu()" class="botonMenu mt-5 mb-5 p-1 col-1"><span class ="fa fa-bars"></span></button>
        
       </header>
+      <div id="menu_movil"  (click)="desplegarMenu()"   class="container oculto">
+          <nav class="col">
+            <ul class="nav-pills">
+                <li class="nav-item "><a class="nav-link" routerLinkActive="active" routerLink="inicio" title="home">Inicio</a></li>
+                <li class="nav-item "><a class="nav-link" routerLinkActive="active" routerLink="centros" title="centros">Centros</a></li>
+                <li class="nav-item "><a class="nav-link" routerLinkActive="active" routerLink="competiciones" title="competiciones">Competiciones</a></li>
+                <li class="nav-item "><a class="nav-link" routerLinkActive="active" routerLink="blog" title="blog">Blog</a></li>
+                <li class="nav-item "><a class="nav-link" routerLinkActive="active" routerLink="about" title="about">About</a></li>
+            </ul>    
+        </nav>
+    </div>
   </div>
  

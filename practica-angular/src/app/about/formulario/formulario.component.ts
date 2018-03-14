@@ -32,7 +32,7 @@ export class FormularioComponent implements OnInit {
      }
      this.checkbox = document.getElementById('checkbox').checked ? 'Si' : 'No';
      this.opinionDatos = document.getElementById('coment').value;*/
-   
+
     localStorage.setItem('nombre',  this.nombre);
     localStorage.setItem('email',  this.email);
     localStorage.setItem('experiencia',  this.experienciaDatos);
@@ -40,7 +40,7 @@ export class FormularioComponent implements OnInit {
     localStorage.setItem('recibirNoticias',  this.checkbox);
     this.datos = {nombre: this.nombre, email : this.email, checkbox: this.checkbox,
        opinionDatos: this.opinionDatos, experienciaDatos: this.experienciaDatos};
-      
+
        this.eDatos.enviarDatos(this.datos);
     this.router.navigate(['about/muestra-datos']);
     /*document.getElementById('nombreDatos').innerHTML = ` ${nombre}`;

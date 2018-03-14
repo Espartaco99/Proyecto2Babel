@@ -4,30 +4,43 @@ header{
     background-color: white;
    
 }
+ header > a{
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+ }
 
-.oculto{
-    display:none !important;
-}
-
-header img{
-    margin-bottom: auto;
-    margin-top: auto;
-    max-width: 100px;
-    width: auto;
-}
-header a{
-    margin-left:3%
-}
 header h1{
     white-space: nowrap;
     text-align: center;
     font-size: 4rem;
-    margin: auto;
+   
 }
-/* header > button{
-    margin-top: auto;
-    margin-bottom: auto;
-    font-size: 3rem;
-    width: 50px;
-    margin-left: 3%;
-} */
+ header > button{
+ 
+    min-width: 50px;
+    visibility: collapse;
+} 
+.oculto{
+    display:none;
+}
+@media screen and (max-width: 800px){
+    header > button{
+       visibility: visible;
+    }
+    header h1{
+       
+        font-size: 3rem;
+       
+    }
+}
+@media screen and (max-width: 500px){
+    header > button{
+       visibility: visible;
+    }
+    header h1{
+       
+        font-size: 2rem;
+       
+    }
+}

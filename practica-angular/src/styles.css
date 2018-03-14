@@ -28,5 +28,42 @@ html{
     display: flex;
     justify-content: space-around;
 }
+.left{
+    position:relative;
+    left: 0;
+    top:0;
+}
+@media screen and (max-width: 800px){
+    article{
+        max-width: 100%;
+        margin: 1%;
+    }
+    section{
+        max-width: 100%;
+        margin: 1%;
+      
+    }
+    .col-7{
+        max-width: 100%;
+    }
+    .col-4{
+        display: block;
+        width: 100%;
+        max-width: 100%;
+    }
+    .col-6{
+        flex:none;
+        display: block;
+        width: 100%;
+        max-width: 100%;
+    }
+    img{
+        display: block;
+        width: 100%;
+    }
+ 
+       
+    
+}
 
 /* You can add global styles to this file, and also import other style files */
