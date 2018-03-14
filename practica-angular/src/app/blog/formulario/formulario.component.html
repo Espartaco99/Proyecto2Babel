@@ -1,13 +1,14 @@
-<div id="formulario" class="row">
+<div id="formulario" class="row" novalidate [ngClass]="validado">
   <div class="col">
       <h2>Escribe una nueva entrada</h2>
-      <form name="form_entrada" id="form_entrada" method="post"> 
-          <label for="autor" class="col">Autor: <input id ="autor" type="text" name="autor" placeholder="Introduce tu nombre" required></label>
-          <label for="email" class="col">Email:<input id="email" name="email" type="email" placeholder="Introduce tu email" required></label>
-          <label for="tituloEntrada" class="col">Titulo entrada: <input id ="tituloEntrada" type="text" name="tituloEntrada" placeholder="Introduce el titulo" required></label>
-          <textarea id="entrada" name="entrada" placeholder="Escriba los nueva entrada" class="col"></textarea>
-          <textarea id="keywords" name="keywords" placeholder="Escriba palabras clave de la entrada" class="col"></textarea>
-              <!-- <li><label>¿Cuanta experiencia tienes en deportes de riesgo?</label></li>
+      <form name="form_entrada" id="form_entrada" method="post" (ngSubmit)="enviar()" #formEntradas="ngForm"> 
+          <label for="autor" class="col">Autor: <input id ="autor" type="text" name="autor" placeholder="Introduce tu nombre" required [(ngModel)]="entrada.autor"></label>
+          <label for="email" class="col">Email:<input id="email" name="email" type="email" placeholder="Introduce tu email" required [(ngModel)]="entrada.email"></label>
+          <label for="tituloEntrada" class="col">Titulo entrada: <input id ="tituloEntrada" type="text" name="tituloEntrada" placeholder="Introduce el titulo" required [(ngModel)]="entrada.titulo"></label>
+          <textarea id="entrada" name="entrada" placeholder="Escriba los nueva entrada" class="col" [(ngModel)]="entrada.texto"></textarea>
+          <textarea id="keywords" name="keywords" placeholder="Escriba palabras clave de la entrada" class="col" [(ngModel)]="palabrasClave"></textarea>
+
+          <!-- <li><label>¿Cuanta experiencia tienes en deportes de riesgo?</label></li>
               <li><label for="radio_poco"><input type="radio" id="radio_poco" name="experiencia" value="Poca" required>Poco</label></li>
               <li><label for="radio_normal"><input type="radio" id="radio_normal" name="experiencia"  value="Normal" required>Normal</label> </li>
               <li><label for="radio_mucho"><input type="radio" id="radio_mucho" name="experiencia"  value="Mucha" required>Mucho</label></li>
@@ -16,8 +17,7 @@
               <li><label for="checkbox"><input type="checkbox" name="noticias" id="checkbox">Deseo recibir noticias y oportunidades sobre salto base.</label></li>          -->
               
           
-          <div class="spaced">
-            
+          <div class="spaced">    
               <button type="reset" class="btn btn-secondary">Borrar</button>
               <button id="submit" type="submit" class="btn btn-secondary">Publicar</button>
           </div>

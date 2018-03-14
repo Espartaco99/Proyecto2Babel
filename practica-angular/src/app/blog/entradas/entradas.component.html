@@ -1,14 +1,14 @@
 <div class="container">
     <div class="row">
       <div class="col">
-  <div id="entrada" class="oculto">
+  <div id="entrada">
     <h2>Entradas Disponibles</h2>
-    <div *ngFor="let entrada of listaEntradas">
-        <label class="col">Autor: </label><!-- <label id="autorDatos"></label> -->
-        <label class="col">Email: </label><!-- <label id="emailEntradaDatos"></label> -->
-        <label class="col">Titulo Entrada: </label><!-- <label id="tituloDatos"></label> -->
-        <label class="col">Palabras Clave: </label><!-- <label id="keywordsDatos"></label> -->
-        <label class="col">Entrada: </label><!-- <label id="entradaDatos"></label> -->
+    <div *ngFor="let entrada of listaEntradas"  class="col flex">
+        <span><label>Autor: </label><label id="autorDatos">{{entrada.autor}}</label></span>
+        <!-- <label class="col">Email: </label><label id="emailEntradaDatos">{{entrada.email}}</label> -->
+        <span><label>Titulo Entrada: </label><label id="tituloDatos">{{entrada.titulo}}</label></span>
+        <span><label>Palabras Clave: </label><label class="margen" id="keywordsDatos" *ngFor="let palabra of entrada.palabrasClave">{{palabra}}</label></span>
+        <!-- <label class="col">Entrada: </label><label id="entradaDatos">{{entrada.texto}}</label> -->
     </div>
 <!--   <label class="center">
     <a routerLink="../autores" id="linkAutores" title="linkAutores" routerLinkActive = "active">Autores</a> /

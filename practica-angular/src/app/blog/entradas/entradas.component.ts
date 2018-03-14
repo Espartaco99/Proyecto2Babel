@@ -1,4 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Entradas } from '../../modelos/entradas';
+import { EntradasService } from '../../servicios/entradas.service';
 
 
 
@@ -8,23 +10,26 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./entradas.component.css']
 })
 export class EntradasComponent implements OnInit {
-  listaEntradas: string[];
+  @Input() listaEntradas: Entradas[];
 
   sTitle: string;
   sEtiquetaBtn: string;
-  @Input() aItems: Array<any>;
   @Output() outBorrarItem: EventEmitter<number>;
 
-  constructor() {
+  constructor(public entradasService: EntradasService) {
     this.outBorrarItem = new EventEmitter();
    }
 
   ngOnInit() {
     this.listaEntradas = [];
-    this.sTitle = 'Contactos personales';
-    this.sEtiquetaBtn = 'Eliminar';
+    this.entradasService.getEntradas()
+    .then((value) => { this.listaEntradas = value; })
+    .catch(() => alert('Fallo en entradas components, bbdd no inicializada o no existe entradas'));
+      console.log(this.listaEntradas);
+    /* this.sTitle = 'Contactos personales';
+    this.sEtiquetaBtn = 'Eliminar'; */
   }
-  deleteItem(i) {
+  /* deleteItem(i) {
     this.outBorrarItem.emit(i);
-  }
+  } */
 }

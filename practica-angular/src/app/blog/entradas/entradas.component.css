@@ -1,0 +1,8 @@
+label:nth-of-type(even):not(.margen), .margen{
+    margin-left: 0.5rem;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
