@@ -10,7 +10,7 @@ import { EntradasService } from '../../servicios/entradas.service';
   styleUrls: ['./entradas.component.css']
 })
 export class EntradasComponent implements OnInit {
-  @Input() listaEntradas: Entradas[];
+  listaEntradas: Entradas[];
 
   sTitle: string;
   sEtiquetaBtn: string;
@@ -21,11 +21,12 @@ export class EntradasComponent implements OnInit {
    }
 
   ngOnInit() {
-    // this.listaEntradas = [];
     this.entradasService.getEntradas().then((value) => { this.listaEntradas = value; })
     .catch(() => alert('Fallo en entradas components, bbdd no inicializada o no existe entradas'));
   }
-  /* deleteItem(i) {
-    this.outBorrarItem.emit(i);
-  } */
+
+  respuestaHijo(event) {
+    console.log('entre respuesta hijo');
+    this.listaEntradas.push(event);
+  }
 }

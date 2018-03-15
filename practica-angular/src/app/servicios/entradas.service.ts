@@ -22,7 +22,12 @@ export class EntradasService {
   }
 
   getEntrada(id: string) {
-    return this.listaEntradas.find(entrada => entrada.id === id);
+    return this.http.get(this.sURL).toPromise()
+    .then((response: any) => {
+      this.listaEntradas = response;
+      return this.listaEntradas.find(entrada => entrada.id === id);
+    });
+    // return this.listaEntradas.find(entrada => entrada.id === id);
   }
 
   setEntrada(entrada) {
