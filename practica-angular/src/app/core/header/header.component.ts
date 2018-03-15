@@ -6,13 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  public vista;
   constructor() {
    }
 
   ngOnInit() {
   }
-  desplegarMenu() {
-    document.querySelector('#menu_movil').classList.toggle('oculto');
+  desplegarMenu(menu) {
+    menu.classList.toggle('oculto');
   }
 }
