@@ -9,3 +9,12 @@ label:nth-of-type(even):not(.margen), .margen{
 .puntero, a, a span, span label{
     cursor: pointer;
 }
+button{
+    border-radius: 1rem;
+}
+
+div>span{
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+}
