@@ -8,12 +8,13 @@ export class MostrarDatosService {
 
     }
     enviarDatos(datos) {
-        console.dir(datos);
-       this.datos = datos;
-       console.dir(this.datos);
-    }
+        this.datos = datos;
+      }
     recibirDatos() {
-        return this.datos;
+        return new Promise((resolve, reject) => {
+            resolve(this.datos);
+               });
     }
-}
 
+
+}
