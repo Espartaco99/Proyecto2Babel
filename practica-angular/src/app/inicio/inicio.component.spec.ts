@@ -6,6 +6,7 @@ import { SectionComponent } from './section/section.component';
 import { Article1Component } from './section/article1/article1.component';
 import { Article2Component } from './section/article2/article2.component';
 import { Article3Component } from './section/article3/article3.component';
+import { RouterTestingModule } from '@angular/router/testing';
 
 
 describe('InicioComponent', () => {
@@ -14,7 +15,16 @@ describe('InicioComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ InicioComponent ]
+      imports: [
+        RouterTestingModule
+      ],
+      declarations: [AsideComponent,
+         SectionComponent,
+          Article1Component,
+           Article2Component,
+            Article3Component,
+             InicioComponent],
+
     })
     .compileComponents();
   }));

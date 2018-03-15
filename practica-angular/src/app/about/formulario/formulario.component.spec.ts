@@ -1,6 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { FormularioComponent } from './formulario.component';
+import { FormsModule } from '@angular/forms';
+import { MostrarDatosService } from '../../servicios/mostrarDatos.service';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('FormularioComponent', () => {
   let component: FormularioComponent;
@@ -8,7 +11,15 @@ describe('FormularioComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FormularioComponent ]
+      imports: [
+        FormsModule,
+        RouterTestingModule
+      ],
+      declarations: [
+        FormularioComponent
+      ],
+      providers: [MostrarDatosService,
+      RouterTestingModule]
     })
     .compileComponents();
   }));
