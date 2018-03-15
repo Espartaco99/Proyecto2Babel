@@ -9,11 +9,7 @@ import { Datos } from '../../modelos/datos';
 })
 export class MuestraDatosComponent implements OnInit {
   datosD: Datos;
-  public nombre: string;
-  public email: string;
-  public checkbox: string;
-  public opinionDatos: string;
-  public experienciaDatos: any;
+
   constructor(public rDatos: MostrarDatosService) { }
 
   ngOnInit() {
@@ -24,13 +20,8 @@ export class MuestraDatosComponent implements OnInit {
       opinionDatos: '',
       experienciaDatos: '',
     };
-    this.datosD = this.rDatos.recibirDatos();
+    this.rDatos.recibirDatos().then((r: any ) => this.datosD = r);
     console.dir(this.datosD);
-    this.nombre = this.datosD.nombre;
-    this.email = this.datosD.email;
-    this.checkbox = this.datosD.checkbox;
-    this.opinionDatos = this.datosD.opinionDatos;
-    this.experienciaDatos = this.datosD.experienciaDatos;
   }
 
 }
