@@ -4,10 +4,15 @@ header{
     background-color: white;
 
 }
- header > a{
+ header a{
     justify-content: center;
     align-content: center;
     flex-direction: column;
+   
+ }
+ a img{
+    width: 75%;
+    height: 75%;
  }
 
 header h1{
@@ -21,6 +26,7 @@ header h1{
     min-width: 50px;
     visibility: collapse;
 } 
+
 .oculto{
     display:none;
 }
@@ -39,8 +45,24 @@ header h1{
        visibility: visible;
     }
     header h1{
-       
         font-size: 2rem;
+    }
+   .col-8{
+     max-width: 50%;
+   }
+}
+@media screen and (max-width: 400px){
+    header > button{
+       visibility: visible;
+    }
+    header h1{
+      
+        font-size: 1rem;
        
     }
+    a img{
+        width: 75%;
+        height: 75%;
+     }
 }
+

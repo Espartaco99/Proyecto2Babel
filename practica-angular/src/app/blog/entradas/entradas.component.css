@@ -11,10 +11,21 @@ label:nth-of-type(even):not(.margen), .margen{
 }
 button{
     border-radius: 1rem;
+    margin-left:-1% 
 }
 
 div>span{
     margin-top: auto;
     margin-bottom: auto;
     text-align: center;
+}
+.entrada{
+    padding-top: 5px;
+    margin-left: 1%;
+  /*  // background-color:aquamarine; */
+    border-radius: 10px;
+    border: 1px    solid grey;
+}
+.negrita{
+    color:black;
 }
