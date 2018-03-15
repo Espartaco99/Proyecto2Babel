@@ -21,7 +21,7 @@ describe('AboutComponent', () => {
       imports: [
         AboutRoutingModule,
         FormsModule,
-        RouterTestingModule
+        RouterTestingModule,
       ],
       declarations: [ AboutComponent,
         AutoresComponent,

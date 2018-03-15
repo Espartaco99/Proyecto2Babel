@@ -15,7 +15,10 @@ import { FormsModule } from '@angular/forms';
     BlogRoutingModule,
     FormsModule
   ],
-  declarations: [BlogComponent, FormularioComponent, EntradasComponent, PaginaComponent],
+  declarations: [BlogComponent,
+     FormularioComponent,
+      EntradasComponent,
+       PaginaComponent],
   providers: [EntradasService]
 })
 export class BlogModule { }

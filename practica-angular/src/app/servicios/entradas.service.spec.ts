@@ -1,11 +1,17 @@
 import { TestBed, inject } from '@angular/core/testing';
 
 import { EntradasService } from './entradas.service';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 describe('EntradasService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [EntradasService]
+      imports: [
+        HttpClientModule
+      ],
+      providers: [
+        EntradasService,
+         HttpClientModule]
     });
   });
 
