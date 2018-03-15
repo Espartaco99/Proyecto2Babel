@@ -1,0 +1,17 @@
+figure{
+    padding-top:10%;
+}
+
+@media screen and (max-width: 1100px){
+    figure{
+        padding-top: 50%
+     
+    }
+}
+
+@media screen and (max-width: 800px){
+    figure{
+        padding-top: 5%
+     
+    }
+}
