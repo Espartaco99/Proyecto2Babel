@@ -20,9 +20,8 @@ div>span{
     text-align: center;
 }
 .entrada{
-    padding-top: 5px;
     margin-left: 1%;
-  /*  // background-color:aquamarine; */
+  
     border-radius: 10px;
     border: 1px    solid grey;
 }

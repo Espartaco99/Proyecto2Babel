@@ -8,3 +8,6 @@ input, textarea{
 label{
     margin-top: 0.5rem;
 }
+.spaced{
+    margin-top: 1rem;
+}
