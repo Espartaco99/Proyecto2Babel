@@ -40,6 +40,7 @@ export class FormularioComponent implements OnInit {
   autosize(element) {
   element.style.cssText = 'height:auto; padding:0';
   element.style.cssText = 'height:' + element.scrollHeight + 'px';
+  }
   respuestaHijo(event) {
     this.entrada = event;
   }
