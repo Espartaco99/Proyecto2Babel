@@ -26,7 +26,6 @@ export class EntradasComponent implements OnInit {
   }
 
   respuestaHijo(event) {
-    console.log('entre respuesta hijo');
     this.listaEntradas.push(event);
   }
 }

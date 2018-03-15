@@ -24,8 +24,11 @@ export class FormularioComponent implements OnInit {
     console.log(this.formUser);
   }
   enviar() {
+    console.log(this.entrada);
     this.entrada.palabrasClave = this.palabrasClave.split(' ');
+    this.entrada.id = this.entradasService.getNextId();
     this.entradasService.setEntrada(this.entrada);
+    console.log(this.entrada);
     this.outAddEntrada.emit(this.entrada);
     this.resetEntrada();
     this.formUser.reset();
@@ -38,10 +41,10 @@ export class FormularioComponent implements OnInit {
       this.entrada = {id: undefined, autor: '', email: '', titulo: '', texto: '', palabrasClave: []};
   }
   autosize(element) {
-  element.style.cssText = 'height:auto; padding:0';
-  element.style.cssText = 'height:' + element.scrollHeight + 'px';
+      element.style.cssText = 'height:auto; padding:0';
+      element.style.cssText = 'height:' + element.scrollHeight + 'px';
   }
   respuestaHijo(event) {
-    this.entrada = event;
+      this.entrada = event;
   }
 }

@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row">
       <div class="col">
-        <div id="entrada" (outAddEntrada)="respuestaHijo($event)">
+        <div id="entrada">
             <h2>Entradas Disponibles</h2>
             <a *ngFor="let entrada of listaEntradas" class="col flex" routerLinkActive="active" [routerLink]="['./entradas', entrada.id]">
                 <span><label>Autor: </label><label id="autorDatos">{{entrada.autor}}</label></span>
@@ -12,4 +12,4 @@
       </div>
     </div>
 </div>
-<bbl-formulario ></bbl-formulario>
+<bbl-formulario (outAddEntrada)="respuestaHijo($event)"></bbl-formulario>

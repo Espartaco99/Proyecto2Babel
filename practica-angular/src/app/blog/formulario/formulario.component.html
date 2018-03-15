@@ -2,16 +2,12 @@
   <div id="formulario" class="row" novalidate [ngClass]="validado">
     <div class="col">
       <h2>Escribe una nueva entrada</h2>
-      <form name="form_entrada" id="form_entrada" method="post" (ngSubmit)="enviar()" #formEntradas="ngForm"> 
-          <label for="autor" class="col">Autor:<br> <input id ="autor" type="text" name="autor" placeholder="Introduce tu nombre" required [(ngModel)]="entrada.autor"></label>
-          <label for="email" class="col">Email:<br><input id="email" name="email" type="email" placeholder="Introduce tu email" required [(ngModel)]="entrada.email"></label>
-          <label for="tituloEntrada" class="col">Titulo entrada: <br><input id ="tituloEntrada" type="text" name="tituloEntrada" placeholder="Introduce el titulo" required [(ngModel)]="entrada.titulo"></label>
-          <div class="col">
-          <textarea id="keywords" name="keywords" #keywords placeholder="Escribe las palabras clave de la entrada" class="col" [(ngModel)]="palabrasClave"></textarea>
-          <textarea id="entrada" name="entrada" #entrada placeholder="Escribe tu nueva entrada" class="col" spellcheck="true" (scroll)= "autosize(entrada)" [(ngModel)]="entrada.texto"></textarea>
-          
-        </div>
-
+      <form name="form_entrada" id="form_entrada" method="post" (ngSubmit)="enviar()" #formEntradas="ngForm" class="col"> 
+          <label for="autor" class="col">Autor:</label> <input class="col" id ="autor" type="text" name="autor" placeholder="Introduce tu nombre" required [(ngModel)]="entrada.autor">
+          <label for="email" class="col">Email:</label> <input class="col" id="email" name="email" type="email" placeholder="Introduce tu email" required [(ngModel)]="entrada.email">
+          <label for="tituloEntrada" class="col">Titulo entrada:</label><input class="col" id ="tituloEntrada" type="text" name="tituloEntrada" placeholder="Introduce el titulo" required [(ngModel)]="entrada.titulo">
+          <label for="entrada" class="col">Texto:</label> <textarea #ent id="entrada" name="entrada" placeholder="Escriba los nueva entrada" class="col" [(ngModel)]="entrada.texto" spellcheck="true" (scroll)="autosize(ent)"></textarea>
+          <label for="keywords" class="col">Palabras Clave:</label>  <textarea id="keywords" name="keywords" placeholder="Escriba palabras clave de la entrada" class="col" [(ngModel)]="palabrasClave"></textarea>         
           <div class="spaced">    
               <button type="reset" class="btn btn-secondary">Borrar</button>
               <button id="submit" type="submit" class="btn btn-secondary">Publicar</button>

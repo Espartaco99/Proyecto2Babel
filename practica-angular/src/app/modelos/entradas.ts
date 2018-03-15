@@ -1,5 +1,5 @@
 export interface Entradas  {
-    id: string;
+    id: number;
     autor: string;
     email: string;
     titulo: string;

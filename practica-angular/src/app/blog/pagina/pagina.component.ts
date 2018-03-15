@@ -17,15 +17,15 @@ export class PaginaComponent implements OnInit {
     private entradasService: EntradasService) { }
 
   ngOnInit() {
-    this.entrada = {id: '',
+    this.entrada = {id: 0,
       autor: '',
       email: '',
       titulo: '',
       palabrasClave: [],
       texto: '',
     };
-    const id = this.activatedRoute.snapshot.params['id'];
-    this.entradasService.getEntrada(id).then((value) => { this.entrada = value; })
+    const id = +this.activatedRoute.snapshot.params['id'];
+    this.entradasService.getEntrada(id).then((value) => { this.entrada = value; console.log(value); })
     .catch(() => alert('Fallo en entradas components, bbdd no inicializada o no existe entradas'));
   }
 

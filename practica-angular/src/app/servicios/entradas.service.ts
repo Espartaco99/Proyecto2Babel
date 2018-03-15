@@ -21,19 +21,23 @@ export class EntradasService {
     });
   }
 
-  getEntrada(id: string) {
+  getEntrada(id: number) {
     return this.http.get(this.sURL).toPromise()
     .then((response: any) => {
       this.listaEntradas = response;
       return this.listaEntradas.find(entrada => entrada.id === id);
     });
-    // return this.listaEntradas.find(entrada => entrada.id === id);
+
   }
 
   setEntrada(entrada) {
       console.log('Enviando datos');
       console.log(entrada);
       return this.http.post(this.sURL, entrada).toPromise();
+  }
+
+  getNextId() {
+    return this.listaEntradas[this.listaEntradas.length - 1].id + 1;
   }
 
 deleteEntrada(i) {
