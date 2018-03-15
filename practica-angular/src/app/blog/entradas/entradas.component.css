@@ -11,7 +11,6 @@ label:nth-of-type(even):not(.margen), .margen{
 }
 button{
     border-radius: 1rem;
-    margin-left:-1% 
 }
 
 div>span{
@@ -19,11 +18,14 @@ div>span{
     margin-bottom: auto;
     text-align: center;
 }
+.entrada span{
+    padding-top: 1%;
+}
 .entrada{
-    padding-top: 5px;
+  
     margin-left: 1%;
   /*  // background-color:aquamarine; */
-    border-radius: 10px;
+    border-radius:  1rem;
     border: 1px    solid grey;
 }
 .negrita{

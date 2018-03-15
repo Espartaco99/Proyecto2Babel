@@ -3,13 +3,13 @@
       <div class="col">
         <div id="entrada">
             <h2>Entradas Disponibles</h2>
-            <div *ngFor="let entrada of listaEntradas" class="row">
-                <a class="entrada col-11 flex mt-4 " routerLinkActive="active" [routerLink]="['./entradas', entrada.id]">
+            <div *ngFor="let entrada of listaEntradas " class="row entrada mt-4">
+                <a class=" col-11 flex  " routerLinkActive="active" [routerLink]="['./entradas', entrada.id]">
                     <span class="col-2"><label class="negrita">Autor: </label><label id="autorDatos">{{entrada.autor}}</label></span>
                     <span class="col-3"><label class="negrita">Título Entrada: </label><label id="tituloDatos">{{entrada.titulo}}</label></span>
                     <span class="col-5"><label class="negrita">Palabras Clave: </label><label class="margen" id="keywordsDatos" *ngFor="let palabra of entrada.palabrasClave">{{palabra}}</label></span>
                 </a>
-                <button class="fa fa-trash puntero col-1 mt-3" (click)="deleteEntrada(entrada.id)" title="Eliminar"></button>
+                <button class="fa fa-trash puntero col-1" (click)="deleteEntrada(entrada.id)" title="Eliminar"></button>
             </div>
         </div>
       </div>

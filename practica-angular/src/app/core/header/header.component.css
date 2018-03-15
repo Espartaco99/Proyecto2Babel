@@ -40,7 +40,7 @@ header h1{
        
     }
 }
-@media screen and (max-width: 500px){
+@media screen and (max-width: 55it 0px){
     header > button{
        visibility: visible;
     }
