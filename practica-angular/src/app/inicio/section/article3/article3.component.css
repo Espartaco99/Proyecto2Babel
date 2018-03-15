@@ -1,0 +1,22 @@
+
+figure{
+    padding-top: 10%;
+    float: left;
+} 
+article{
+    float:right;
+}
+@media screen and (max-width: 1100px){
+    figure{
+        padding-top: 30%
+     
+    }
+}
+
+@media screen and (max-width: 800px){
+    figure{
+        padding-top: 5%
+    
+    }
+
+}
