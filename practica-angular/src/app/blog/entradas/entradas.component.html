@@ -1,19 +1,15 @@
 <div class="container">
     <div class="row">
       <div class="col">
-  <div id="entrada">
-    <h2>Entradas Disponibles</h2>
-    <a *ngFor="let entrada of listaEntradas" class="col flex" routerLinkActive="active" [routerLink]="['./entradas', entrada.id]">
-        <span><label>Autor: </label><label id="autorDatos">{{entrada.autor}}</label></span>
-        <!-- <label class="col">Email: </label><label id="emailEntradaDatos">{{entrada.email}}</label> -->
-        <span><label>Titulo Entrada: </label><label id="tituloDatos">{{entrada.titulo}}</label></span>
-        <span><label>Palabras Clave: </label><label class="margen" id="keywordsDatos" *ngFor="let palabra of entrada.palabrasClave">{{palabra}}</label></span>
-        <!-- <label class="col">Entrada: </label><label id="entradaDatos">{{entrada.texto}}</label> -->
-    </a>
-<!--   <label class="center">
-    <a routerLink="../autores" id="linkAutores" title="linkAutores" routerLinkActive = "active">Autores</a> /
-    <a routerLink="../formulario" id="linkFormulario" class="desactivo" routerLinkActive = "active">Contacta con nosotros:</a>
-  </label> -->
+        <div id="entrada" (outAddEntrada)="respuestaHijo($event)">
+            <h2>Entradas Disponibles</h2>
+            <a *ngFor="let entrada of listaEntradas" class="col flex" routerLinkActive="active" [routerLink]="['./entradas', entrada.id]">
+                <span><label>Autor: </label><label id="autorDatos">{{entrada.autor}}</label></span>
+                <span><label>Titulo Entrada: </label><label id="tituloDatos">{{entrada.titulo}}</label></span>
+                <span><label>Palabras Clave: </label><label class="margen" id="keywordsDatos" *ngFor="let palabra of entrada.palabrasClave">{{palabra}}</label></span>
+            </a>
+        </div>
       </div>
     </div>
-  </div>
+</div>
+<bbl-formulario ></bbl-formulario>

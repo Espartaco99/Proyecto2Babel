@@ -25,4 +25,8 @@ export class EntradasComponent implements OnInit {
     .catch(() => alert('Fallo en entradas components, bbdd no inicializada o no existe entradas'));
   }
 
+  respuestaHijo(event) {
+    console.log('entre respuesta hijo');
+    this.listaEntradas.push(event);
+  }
 }
