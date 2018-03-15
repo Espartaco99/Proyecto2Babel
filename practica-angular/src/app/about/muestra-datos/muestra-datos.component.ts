@@ -17,6 +17,13 @@ export class MuestraDatosComponent implements OnInit {
   constructor(public rDatos: MostrarDatosService) { }
 
   ngOnInit() {
+    this.datosD = {
+      nombre: '',
+      email: '',
+      checkbox: '',
+      opinionDatos: '',
+      experienciaDatos: '',
+    };
     this.datosD = this.rDatos.recibirDatos();
     console.dir(this.datosD);
     this.nombre = this.datosD.nombre;
