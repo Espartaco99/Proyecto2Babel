@@ -4,6 +4,7 @@ import { FormularioComponent } from './formulario.component';
 import { FormsModule } from '@angular/forms';
 import { MostrarDatosService } from '../../servicios/mostrarDatos.service';
 import { RouterTestingModule } from '@angular/router/testing';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('FormularioComponent', () => {
   let component: FormularioComponent;
@@ -13,7 +14,8 @@ describe('FormularioComponent', () => {
     TestBed.configureTestingModule({
       imports: [
         FormsModule,
-        RouterTestingModule
+        RouterTestingModule,
+        HttpClientModule
       ],
       declarations: [
         FormularioComponent
