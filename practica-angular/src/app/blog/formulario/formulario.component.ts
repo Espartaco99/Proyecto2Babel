@@ -38,4 +38,8 @@ export class FormularioComponent implements OnInit {
   private resetEntrada() {
       this.entrada = {id: undefined, autor: '', email: '', titulo: '', texto: '', palabrasClave: []};
   }
+  autosize(element) {
+  element.style.cssText = 'height:auto; padding:0';
+  element.style.cssText = 'height:' + element.scrollHeight + 'px';
+  }
 }

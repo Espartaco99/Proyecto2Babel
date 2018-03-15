@@ -28,11 +28,7 @@ html{
     display: flex;
     justify-content: space-around;
 }
-.left{
-    position:relative;
-    left: 0;
-    top:0;
-}
+
 @media screen and (max-width: 800px){
     article{
         max-width: 100%;
@@ -57,10 +53,7 @@ html{
         width: 100%;
         max-width: 100%;
     }
-    img{
-        display: block;
-        width: 100%;
-    }
+    
  
        
     

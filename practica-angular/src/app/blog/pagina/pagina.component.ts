@@ -17,7 +17,7 @@ export class PaginaComponent implements OnInit {
     private entradasService: EntradasService) { }
 
   ngOnInit() {
-   
+
     const id = this.activatedRoute.snapshot.params['id'];
     console.log(id);
     this.entrada = this.entradasService.getEntrada(id);
