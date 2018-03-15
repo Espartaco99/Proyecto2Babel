@@ -11,7 +11,8 @@ describe('EntradasService', () => {
       ],
       providers: [
         EntradasService,
-         HttpClientModule]
+        HttpClientModule
+      ]
     });
   });
 

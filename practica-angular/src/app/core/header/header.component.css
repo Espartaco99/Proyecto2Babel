@@ -4,16 +4,18 @@ header{
     background-color: white;
 
 }
- header a{
+header > a{
     justify-content: center;
     align-content: center;
     flex-direction: column;
-   
- }
- a img{
+}
+a img{
     width: 75%;
     height: 75%;
  }
+ul{
+    list-style-type: none;
+}
 
 header h1{
     white-space: nowrap;
@@ -30,6 +32,10 @@ header h1{
 .oculto{
     display:none;
 }
+div>div.container{
+    margin-top: 2rem;
+}
+
 @media screen and (max-width: 800px){
     header > button{
        visibility: visible;
@@ -40,10 +46,18 @@ header h1{
        
     }
 }
-@media screen and (max-width: 55it 0px){
-    header > button{
-       visibility: visible;
+@media screen and (min-width: 800px){
+    
+    div>div.container{
+        display: none;
     }
+    
+    header h1{ 
+        font-size: 4rem; 
+    }
+}
+
+@media screen and (max-width: 550px){
     header h1{
         font-size: 2rem;
     }

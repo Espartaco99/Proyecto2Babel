@@ -4,6 +4,9 @@ import { MuestraDatosComponent } from './muestra-datos.component';
 import { FormsModule } from '@angular/forms';
 import { RouterTestingModule } from '@angular/router/testing';
 import { MostrarDatosService } from '../../servicios/mostrarDatos.service';
+import { AboutComponent } from '../about.component';
+import { AutoresComponent } from '../autores/autores.component';
+import { FormularioComponent } from '../formulario/formulario.component';
 
 describe('MuestraDatosComponent', () => {
   let component: MuestraDatosComponent;
@@ -16,11 +19,15 @@ describe('MuestraDatosComponent', () => {
         RouterTestingModule
       ],
       declarations: [
+        AboutComponent,
+        AutoresComponent,
+        FormularioComponent,
         MuestraDatosComponent
       ],
       providers: [
         MostrarDatosService,
-      RouterTestingModule]
+        RouterTestingModule
+    ]
     })
     .compileComponents();
   }));
