@@ -37,13 +37,15 @@ export class EntradasService {
   }
 
   getNextId() {
-    return this.listaEntradas[this.listaEntradas.length - 1].id + 1;
+    if (this.listaEntradas.length) {
+      return this.listaEntradas[this.listaEntradas.length - 1].id + 1;
+    } else {
+      return 1;
+    }
   }
 
-deleteEntrada(i) {
-    i++;
-    return this.http.delete(this.sURL + '/' + i).toPromise();
-    // this.aContactos.splice(i, 1);
+deleteEntrada(id) {
+    return this.http.delete(this.sURL + '/' + id).toPromise();
   }
 
 }

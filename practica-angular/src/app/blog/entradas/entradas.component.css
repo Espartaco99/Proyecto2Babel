@@ -6,3 +6,6 @@ label:nth-of-type(even):not(.margen), .margen{
     display: flex;
     justify-content: space-between;
 }
+.puntero, a, a span, span label{
+    cursor: pointer;
+}
