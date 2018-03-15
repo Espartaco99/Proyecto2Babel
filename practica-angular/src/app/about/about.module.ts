@@ -15,12 +15,14 @@ import { MostrarDatosService } from '../servicios/mostrarDatos.service';
     AboutRoutingModule,
     FormsModule,
   ],
-  declarations: [AboutComponent,
-     AutoresComponent,
-      FormularioComponent,
-       MuestraDatosComponent],
-       providers: [
-         MostrarDatosService
-       ]
+  declarations: [
+    AboutComponent,
+    AutoresComponent,
+    FormularioComponent,
+    MuestraDatosComponent
+  ],
+  providers: [
+    MostrarDatosService
+  ]
 })
 export class AboutModule { }
