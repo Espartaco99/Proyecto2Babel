@@ -13,6 +13,10 @@ figure{
     float: right;
 }
 @media screen and (max-width: 800px){
+    h2{
+        text-align: center
+
+    }
  .right{
      float: left;
  }
