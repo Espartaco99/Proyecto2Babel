@@ -28,6 +28,9 @@ html{
     display: flex;
     justify-content: space-around;
 }
+.error-message{
+    color: red;
+}
 
 @media screen and (max-width: 800px){
     article{
